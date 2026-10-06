@@ -1,0 +1,16 @@
+{
+  "name": "slickwebdev-orch",
+  "version": "0.2.0",
+  "private": true,
+  "description": "SlickLab TCC orchestration maps: two static, single-file interactive diagrams and a PostgreSQL/pgvector schema.",
+  "type": "module",
+  "scripts": {
+    "test": "npm run test:static && npm run test:browser && npm run test:sql",
+    "test:static": "node tests/static.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:sql": "bash tests/sql/run.sh"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.43.1"
+  }
+}

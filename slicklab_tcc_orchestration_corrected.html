@@ -1,15 +1,49 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>SlickLab TCC — Agentic Agency Orchestration (Corrected)</title>
+<meta name="description" content="Interactive map of an agentic web agency lifecycle, from market selection to launch and recurring operations, with human approval gates. Illustrative: nothing is executed.">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="data:,">
 <style>
-:root{--bg:#07090e;--panel:#0e121b;--panel2:#141a25;--text:#eaf0ff;--muted:#8490a7;--cyan:#35e6d0;--blue:#5b8cff;--violet:#a56bff;--amber:#ffbd4a;--red:#ff5470;--green:#4be38a;--line:#253047;--shadow:0 20px 70px #0008;--r:18px}*{box-sizing:border-box}html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;overflow:hidden}button,input{font:inherit}.grain{position:fixed;inset:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}.app{display:grid;grid-template-columns:270px 1fr;grid-template-rows:76px 1fr;height:100%}.top{grid-column:1/-1;display:flex;align-items:center;gap:18px;padding:0 22px;border-bottom:1px solid var(--line);background:#090d14dd;backdrop-filter:blur(20px);z-index:20}.brand{display:flex;align-items:center;gap:12px;min-width:248px}.logo{width:38px;height:38px;border-radius:12px;background:conic-gradient(from 220deg,var(--cyan),var(--blue),var(--violet),var(--cyan));box-shadow:0 0 30px #35e6d055;position:relative}.logo:after{content:'';position:absolute;inset:8px;background:var(--bg);border-radius:8px}.brand b{font-size:15px;letter-spacing:.08em}.brand small{display:block;color:var(--muted);letter-spacing:.14em;font-size:9px}.search{flex:1;max-width:620px;position:relative}.search input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--text);padding:12px 90px 12px 40px;outline:none}.search input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #35e6d018}.search:before{content:'⌕';position:absolute;left:14px;top:7px;font-size:23px;color:var(--muted)}kbd{position:absolute;right:10px;top:10px;border:1px solid var(--line);background:#171d29;color:var(--muted);border-radius:7px;padding:2px 7px}.top-actions{margin-left:auto;display:flex;gap:8px}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:9px 12px;border-radius:11px;cursor:pointer;transition:.2s}.btn:hover{border-color:var(--cyan);transform:translateY(-1px)}.btn.primary{background:linear-gradient(135deg,#1fcbb8,#477be8);border:0;color:#03100f;font-weight:800}.sidebar{border-right:1px solid var(--line);background:#090c13;padding:18px 14px;overflow:auto;z-index:10}.section-label{color:#5f6b82;font-size:10px;text-transform:uppercase;letter-spacing:.16em;margin:15px 10px 8px}.nav{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;color:#aab4c8;cursor:pointer}.nav:hover,.nav.active{background:#17202d;color:#fff}.nav.active{box-shadow:inset 3px 0 var(--cyan)}.dot{width:8px;height:8px;border-radius:50%;background:var(--cyan)}.metric{margin:20px 4px;padding:14px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#111722,#0b0f16)}.metric strong{font-size:25px}.metric span{display:block;color:var(--muted);font-size:11px}.content{position:relative;overflow:hidden;background:radial-gradient(circle at 60% 40%,#14233b 0,transparent 38%),linear-gradient(#0b0f17 1px,transparent 1px),linear-gradient(90deg,#0b0f17 1px,transparent 1px);background-size:auto,32px 32px,32px 32px}.hud{position:absolute;top:16px;left:18px;right:18px;display:flex;justify-content:space-between;z-index:8;pointer-events:none}.titlebox h1{margin:0;font-size:23px}.titlebox p{margin:4px 0;color:var(--muted)}.chips{display:flex;gap:7px;pointer-events:auto;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#0e131dcc;color:#9ba8be;padding:7px 10px;border-radius:999px;cursor:pointer;backdrop-filter:blur(12px)}.chip.active{color:var(--cyan);border-color:#35e6d077;background:#11302c}.viewport{position:absolute;inset:0;overflow:hidden;cursor:grab}.viewport.grabbing{cursor:grabbing}.world{position:absolute;transform-origin:0 0;width:2100px;height:1050px}.world svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.edge{stroke:#34425e;stroke-width:2;fill:none;marker-end:url(#arrow)}.edge.hot{stroke:var(--cyan);stroke-dasharray:7 8;animation:dash 18s linear infinite;filter:drop-shadow(0 0 5px #35e6d066)}@keyframes dash{to{stroke-dashoffset:-300}}.node{position:absolute;width:205px;min-height:95px;border:1px solid #28344b;background:linear-gradient(145deg,#151c28ee,#0c111aee);border-radius:16px;padding:14px;box-shadow:0 12px 35px #0006;cursor:pointer;transition:.2s;backdrop-filter:blur(12px);user-select:none}.node:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 18px 45px #0009,0 0 25px #35e6d01c}.node.gate{border-color:#ffbd4a77}.node.live{border-color:#4be38a77}.node .idx{font:700 10px/1 monospace;letter-spacing:.12em;color:var(--cyan)}.node h3{font-size:14px;margin:8px 0 5px}.node p{font-size:11px;color:var(--muted);margin:0}.badge{position:absolute;right:11px;top:11px;font-size:9px;padding:4px 7px;border-radius:8px;background:#202a3a;color:#a9b6ca}.gate .badge{background:#3a2b12;color:var(--amber)}.live .badge{background:#123323;color:var(--green)}.node.hidden{opacity:.1;pointer-events:none}.controls{position:absolute;right:18px;bottom:18px;display:flex;gap:7px;z-index:9}.mini{width:39px;height:39px;padding:0;font-size:18px}.legend{position:absolute;left:18px;bottom:18px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#0c111acc;color:var(--muted);z-index:8}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin:0 5px 0 10px}.drawer{position:fixed;right:0;top:76px;bottom:0;width:min(430px,95vw);background:#0d121bfa;border-left:1px solid var(--line);box-shadow:var(--shadow);z-index:30;padding:25px;transform:translateX(105%);transition:.35s cubic-bezier(.2,.9,.2,1);overflow:auto}.drawer.open{transform:none}.drawer .close{float:right}.eyebrow{color:var(--cyan);font:700 10px monospace;letter-spacing:.16em}.drawer h2{font-size:26px;margin:12px 0}.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:18px 0}.stat{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px}.stat b{display:block;color:var(--cyan)}.list{padding:0;list-style:none}.list li{padding:10px 0;border-bottom:1px solid var(--line);color:#adb7ca}.list li:before{content:'↳';color:var(--cyan);margin-right:10px}.timeline{height:5px;background:#202838;border-radius:9px;overflow:hidden}.timeline span{display:block;height:100%;width:35%;background:linear-gradient(90deg,var(--cyan),var(--blue));animation:pulse 2s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}.palette{display:none;position:fixed;inset:0;background:#0009;z-index:50;place-items:start center;padding-top:13vh}.palette.open{display:grid}.palbox{width:min(600px,92vw);background:#101621;border:1px solid #34425e;border-radius:16px;box-shadow:var(--shadow);overflow:hidden}.palbox input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);padding:18px;color:#fff;outline:none}.palitem{padding:13px 18px;color:#b8c3d6;cursor:pointer}.palitem:hover{background:#182233;color:#fff}@media(max-width:800px){.app{grid-template-columns:1fr}.sidebar{display:none}.brand{min-width:auto}.brand div{display:none}.top{padding:0 10px}.top-actions .btn:not(.primary){display:none}.hud{top:12px}.chips{display:none}}
+:root{--bg:#07090e;--panel:#0e121b;--panel2:#141a25;--text:#eaf0ff;--muted:#8490a7;--cyan:#35e6d0;--blue:#5b8cff;--violet:#a56bff;--amber:#ffbd4a;--red:#ff5470;--green:#4be38a;--line:#253047;--shadow:0 20px 70px #0008;--r:18px}*{box-sizing:border-box}html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;overflow:hidden}button,input{font:inherit}.grain{position:fixed;inset:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}.app{display:grid;grid-template-columns:270px 1fr;grid-template-rows:76px 1fr;height:100%}.top{grid-column:1/-1;display:flex;align-items:center;gap:18px;padding:0 22px;border-bottom:1px solid var(--line);background:#090d14dd;backdrop-filter:blur(20px);z-index:20}.brand{display:flex;align-items:center;gap:12px;min-width:248px}.logo{width:38px;height:38px;border-radius:12px;background:conic-gradient(from 220deg,var(--cyan),var(--blue),var(--violet),var(--cyan));box-shadow:0 0 30px #35e6d055;position:relative}.logo:after{content:'';position:absolute;inset:8px;background:var(--bg);border-radius:8px}.brand b{font-size:15px;letter-spacing:.08em}.brand small{display:block;color:var(--muted);letter-spacing:.14em;font-size:9px}.search{flex:1;max-width:620px;position:relative}.search input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--text);padding:12px 90px 12px 40px;outline:none}.search input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #35e6d018}.search:before{content:'⌕';position:absolute;left:14px;top:7px;font-size:23px;color:var(--muted)}kbd{position:absolute;right:10px;top:10px;border:1px solid var(--line);background:#171d29;color:var(--muted);border-radius:7px;padding:2px 7px}.top-actions{margin-left:auto;display:flex;gap:8px}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:9px 12px;border-radius:11px;cursor:pointer;transition:.2s}.btn:hover{border-color:var(--cyan);transform:translateY(-1px)}.btn.primary{background:linear-gradient(135deg,#1fcbb8,#477be8);border:0;color:#03100f;font-weight:800}.sidebar{border-right:1px solid var(--line);background:#090c13;padding:18px 14px;overflow:auto;z-index:10}.section-label{color:#5f6b82;font-size:10px;text-transform:uppercase;letter-spacing:.16em;margin:15px 10px 8px}.nav{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;color:#aab4c8;cursor:pointer}.nav:hover,.nav.active{background:#17202d;color:#fff}.nav.active{box-shadow:inset 3px 0 var(--cyan)}.dot{width:8px;height:8px;border-radius:50%;background:var(--cyan)}.metric{margin:20px 4px;padding:14px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#111722,#0b0f16)}.metric strong{font-size:25px}.metric span{display:block;color:var(--muted);font-size:11px}.content{position:relative;overflow:hidden;background:radial-gradient(circle at 60% 40%,#14233b 0,transparent 38%),linear-gradient(#0b0f17 1px,transparent 1px),linear-gradient(90deg,#0b0f17 1px,transparent 1px);background-size:auto,32px 32px,32px 32px}.hud{position:absolute;top:16px;left:18px;right:18px;display:flex;justify-content:space-between;z-index:8;pointer-events:none}.titlebox h1{margin:0;font-size:23px}.titlebox p{margin:4px 0;color:var(--muted)}.chips{display:flex;gap:7px;pointer-events:auto;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#0e131dcc;color:#9ba8be;padding:7px 10px;border-radius:999px;cursor:pointer;backdrop-filter:blur(12px)}.chip.active{color:var(--cyan);border-color:#35e6d077;background:#11302c}.viewport{position:absolute;inset:0;overflow:hidden;cursor:grab}.viewport.grabbing{cursor:grabbing}.world{position:absolute;transform-origin:0 0;width:2100px;height:1050px}.world svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.edge{stroke:#34425e;stroke-width:2;fill:none;marker-end:url(#arrow)}.edge.hot{stroke:var(--cyan);stroke-dasharray:7 8;animation:dash 18s linear infinite;filter:drop-shadow(0 0 5px #35e6d066)}@keyframes dash{to{stroke-dashoffset:-300}}.node{position:absolute;width:205px;min-height:95px;border:1px solid #28344b;background:linear-gradient(145deg,#151c28ee,#0c111aee);border-radius:16px;padding:14px;box-shadow:0 12px 35px #0006;cursor:pointer;transition:.2s;backdrop-filter:blur(12px);user-select:none}.node:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 18px 45px #0009,0 0 25px #35e6d01c}.node.gate{border-color:#ffbd4a77}.node.live{border-color:#4be38a77}.node .idx{font:700 10px/1 monospace;letter-spacing:.12em;color:var(--cyan)}.node h2{font-size:14px;margin:8px 0 5px}.node p{font-size:11px;color:var(--muted);margin:0}.badge{position:absolute;right:11px;top:11px;font-size:9px;padding:4px 7px;border-radius:8px;background:#202a3a;color:#a9b6ca}.gate .badge{background:#3a2b12;color:var(--amber)}.live .badge{background:#123323;color:var(--green)}.node.hidden{opacity:.1;pointer-events:none}.controls{position:absolute;right:18px;bottom:18px;display:flex;gap:7px;z-index:9}.mini{width:39px;height:39px;padding:0;font-size:18px}.legend{position:absolute;left:18px;bottom:18px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#0c111acc;color:var(--muted);z-index:8}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin:0 5px 0 10px}.drawer{position:fixed;right:0;top:76px;bottom:0;width:min(430px,95vw);background:#0d121bfa;border-left:1px solid var(--line);box-shadow:var(--shadow);z-index:30;padding:25px;transform:translateX(105%);transition:.35s cubic-bezier(.2,.9,.2,1);overflow:auto}.drawer.open{transform:none}.drawer .close{float:right}.eyebrow{color:var(--cyan);font:700 10px monospace;letter-spacing:.16em}.drawer h2{font-size:26px;margin:12px 0}.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:18px 0}.stat{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px}.stat b{display:block;color:var(--cyan)}.list{padding:0;list-style:none}.list li{padding:10px 0;border-bottom:1px solid var(--line);color:#adb7ca}.list li:before{content:'↳';color:var(--cyan);margin-right:10px}.timeline{height:5px;background:#202838;border-radius:9px;overflow:hidden}.timeline span{display:block;height:100%;width:35%;background:linear-gradient(90deg,var(--cyan),var(--blue));animation:pulse 2s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}.palette{display:none;position:fixed;inset:0;background:#0009;z-index:50;place-items:start center;padding-top:13vh}.palette.open{display:grid}.palbox{width:min(600px,92vw);background:#101621;border:1px solid #34425e;border-radius:16px;box-shadow:var(--shadow);overflow:hidden}.palbox input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);padding:18px;color:#fff;outline:none}.palitem{padding:13px 18px;color:#b8c3d6;cursor:pointer}.palitem:hover{background:#182233;color:#fff}@media(max-width:800px){.app{grid-template-columns:1fr}.sidebar{display:none}.brand{min-width:auto}.brand div{display:none}.top{padding:0 10px}.top-actions .btn:not(.primary){display:none}.hud{top:12px}.chips{display:none}}
+/* --- deploy-readiness additions --- */
+button.nav{width:100%;border:0;background:none;font:inherit;text-align:left;white-space:nowrap}
+.nav[disabled]{opacity:.45;cursor:not-allowed}.nav[disabled]:hover{background:none;color:#aab4c8}
+.count{margin-left:auto;color:var(--amber)}.tag{margin-left:auto;font-size:8px;letter-spacing:.08em;border:1px solid var(--line);border-radius:6px;padding:2px 5px;color:var(--muted);white-space:nowrap}
+.node:focus-visible,.btn:focus-visible,.chip:focus-visible,.nav:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.node.sel{border-color:var(--cyan)}.node.active{outline:3px solid var(--cyan);outline-offset:2px}
+.viewport{touch-action:none;user-select:none;-webkit-user-select:none}
+.world.anim{transition:transform .35s cubic-bezier(.2,.9,.2,1)}
+.edge.dim{opacity:.12}.edge.loop{stroke-dasharray:2 7;stroke-linecap:round}
+.edge-label{fill:#7a869d;font:600 11px ui-monospace,monospace;letter-spacing:.14em}
+.timeline span{animation:none;transition:width .3s}
+.palitem.on{background:#182233;color:#fff}.palempty{padding:13px 18px;color:var(--muted)}
+.empty{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:8;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:#0c111aee;color:var(--muted);text-align:center}
+.empty[hidden]{display:none}.empty .chip{margin-left:8px}
+body.focusmode .app{grid-template-columns:1fr}body.focusmode .sidebar{display:none}
+.hud{align-items:flex-start}
+.section-label{color:#7a869d}
+.legend{max-width:calc(100% - 180px)}.legend .k{display:inline-block;white-space:nowrap}
+@media(max-width:1100px){.legend .hint{display:none}}
+@media(min-width:1200px){.controls{transition:right .35s cubic-bezier(.2,.9,.2,1)}body.detail .controls{right:448px}body.detail .legend .hint{display:none}}
+@media(max-width:800px){.hud{flex-direction:column;gap:8px;left:12px;right:12px}.chips{display:flex;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.chip{white-space:nowrap}.titlebox h1{font-size:19px}.legend{max-width:calc(100% - 175px);font-size:12px;left:12px;bottom:12px}.legend .hint{display:none}.controls{right:12px;bottom:12px}.drawer{width:100vw}.search kbd{display:none}.search input{padding-right:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style></head><body><div class="grain"></div><div class="app">
-<header class="top"><div class="brand"><div class="logo"></div><div><b>SLICKLAB / TCC</b><small>AGENTIC AGENCY OS</small></div></div><div class="search"><input id="search" placeholder="Search agents, states, gates…" aria-label="Search"><kbd>⌘ K</kbd></div><div class="top-actions"><button class="btn" id="focus">Focus mode</button><button class="btn primary" id="simulate">▶ Simulate flow</button></div></header>
-<aside class="sidebar"><div class="section-label">Command Center</div><div class="nav active">◈ Orchestration map</div><div class="nav">◎ Approval queue <span style="margin-left:auto;color:var(--amber)">11</span></div><div class="nav">▦ Evidence vault</div><div class="nav">⌁ Agent runs</div><div class="section-label">Lifecycle</div><div class="nav"><span class="dot"></span> Acquisition</div><div class="nav"><span class="dot" style="background:var(--violet)"></span> Sales</div><div class="nav"><span class="dot" style="background:var(--blue)"></span> Fulfillment</div><div class="nav"><span class="dot" style="background:var(--green)"></span> Recurring ops</div><div class="section-label">North star</div><div class="metric"><span>Optimization objective</span><strong>MRR ÷ Hours</strong><span>Verified recurring revenue per human operational hour</span></div></aside>
-<main class="content"><div class="hud"><div class="titlebox"><h1>Agency orchestration map</h1><p>State-driven. Evidence-grounded. Human-controlled.</p></div><div class="chips"><button class="chip active" data-filter="all">All</button><button class="chip" data-filter="agent">Agents</button><button class="chip" data-filter="gate">Approval gates</button><button class="chip" data-filter="runtime">Runtime</button></div></div><div class="viewport" id="viewport"><div class="world" id="world"><svg id="edges"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#53627d"/></marker></defs></svg></div></div><div class="legend">Drag to pan · scroll to zoom <i style="background:var(--cyan)"></i>agent <i style="background:var(--amber)"></i>human gate <i style="background:var(--green)"></i>live ops</div><div class="controls"><button class="btn mini" id="minus">−</button><button class="btn mini" id="reset">⌂</button><button class="btn mini" id="plus">+</button></div></main></div>
-<aside class="drawer" id="drawer"><button class="btn close" id="close">×</button><div class="eyebrow" id="dphase"></div><h2 id="dtitle"></h2><p id="ddesc" style="color:var(--muted)"></p><div class="statgrid"><div class="stat"><small>Authority</small><b id="dauth"></b></div><div class="stat"><small>State</small><b id="dstate"></b></div></div><h3>Responsibilities</h3><ul class="list" id="dtasks"></ul><h3>Execution progress</h3><div class="timeline"><span></span></div><p style="color:var(--muted);font-size:11px">Illustrative UI only — no external action is executed.</p></aside>
-<div class="palette" id="palette"><div class="palbox"><input id="cmd" placeholder="Type a command…"><div class="palitem" data-cmd="reset">Reset view</div><div class="palitem" data-cmd="simulate">Simulate approved workflow</div><div class="palitem" data-cmd="gates">Show approval gates only</div></div></div>
+<header class="top"><div class="brand"><div class="logo"></div><div><b>SLICKLAB / TCC</b><small>AGENTIC AGENCY OS</small></div></div><div class="search"><input id="search" placeholder="Search agents, states, gates…" aria-label="Search the map" autocomplete="off"><kbd id="kbdHint">⌘ K</kbd></div><div class="top-actions"><button class="btn" id="focusBtn" aria-pressed="false">Focus mode</button><button class="btn primary" id="simBtn">▶ Simulate flow</button></div></header>
+<aside class="sidebar" aria-label="Map sections"><div class="section-label">Command Center</div><button class="nav active" data-nav="map">◈ Orchestration map</button><button class="nav" data-nav="gates">◎ Approval gates <span class="count" id="gateCount"></span></button><button class="nav" disabled title="Not connected: this view needs the TCC backend">▦ Evidence vault <span class="tag">NOT CONNECTED</span></button><button class="nav" disabled title="Not connected: this view needs the TCC backend">⌁ Agent runs <span class="tag">NOT CONNECTED</span></button><div class="section-label">Lifecycle</div><button class="nav" data-phase="acquisition"><span class="dot"></span> Acquisition</button><button class="nav" data-phase="sales"><span class="dot" style="background:var(--violet)"></span> Sales</button><button class="nav" data-phase="fulfillment"><span class="dot" style="background:var(--blue)"></span> Fulfillment</button><button class="nav" data-phase="recurring"><span class="dot" style="background:var(--green)"></span> Recurring ops</button><div class="section-label">North star</div><div class="metric"><span>Optimization objective</span><strong>MRR ÷ Hours</strong><span>Verified recurring revenue per human operational hour</span></div></aside>
+<main class="content"><div class="hud" id="hud"><div class="titlebox"><h1>Agency orchestration map</h1><p>State-driven. Evidence-grounded. Human-controlled.</p></div><div class="chips" role="group" aria-label="Filter by type"><button class="chip active" data-filter="all" aria-pressed="true">All</button><button class="chip" data-filter="agent" aria-pressed="false">Agents</button><button class="chip" data-filter="gate" aria-pressed="false">Approval gates</button><button class="chip" data-filter="runtime" aria-pressed="false">Runtime</button></div></div><div class="viewport" id="viewport"><div class="world" id="world"><svg id="edges" aria-hidden="true"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#53627d"/></marker></defs></svg></div></div><noscript><div class="empty">This map is drawn with JavaScript. Turn it on to explore the 18 steps.</div></noscript><div class="empty" id="empty" hidden>No step matches.<button class="chip" id="clearFilters">Clear filters</button></div><div class="legend"><span class="hint">Drag to pan · scroll or pinch to zoom</span> <span class="k"><i style="background:var(--cyan)"></i>agent</span> <span class="k"><i style="background:var(--amber)"></i>human gate</span> <span class="k"><i style="background:var(--green)"></i>live ops</span></div><div class="controls"><button class="btn mini" id="zoomOut" aria-label="Zoom out">−</button><button class="btn mini" id="home" aria-label="Fit the map to the screen">⌂</button><button class="btn mini" id="zoomIn" aria-label="Zoom in">+</button></div></main></div>
+<aside class="drawer" id="drawer" aria-label="Step details" inert><button class="btn close" id="drawerClose" aria-label="Close details">×</button><div class="eyebrow" id="dphase"></div><h2 id="dtitle"></h2><p id="ddesc" style="color:var(--muted)"></p><div class="statgrid"><div class="stat"><small>Authority</small><b id="dauth"></b></div><div class="stat"><small>State</small><b id="dstate"></b></div></div><h3>Responsibilities</h3><ul class="list" id="dtasks"></ul><h3>Position in lifecycle</h3><div class="timeline"><span id="dbar"></span></div><p id="dstep" style="color:var(--muted);font-size:11px"></p><p style="color:var(--muted);font-size:11px">Illustrative UI only — no external action is executed.</p></aside>
+<div class="palette" id="palette"><div class="palbox" role="dialog" aria-label="Command palette"><input id="cmd" placeholder="Type a command or a step name…" aria-label="Command" autocomplete="off"><div id="pallist" role="listbox" aria-label="Commands"></div></div></div>
 <script>
+(() => {
+'use strict';
+// Elements are looked up explicitly. Relying on window.<id> broke this page: Chrome now ships a
+// built-in window.viewport, and window.close / window.focus were always built-ins.
+const $ = id => document.getElementById(id);
+const world = $('world'), svg = $('edges'), viewport = $('viewport'), hud = $('hud'), drawer = $('drawer');
+const searchBox = $('search'), simBtn = $('simBtn'), focusBtn = $('focusBtn'), palette = $('palette'), cmd = $('cmd'), palList = $('pallist');
+const NS = 'http://www.w3.org/2000/svg';
+// name, description, state, authority, responsibilities, type, x, y
 const data=[
 ['Market Intelligence','Select niche, geography and offer using approved inputs.','MARKET_SELECTION','Human + TCC',['Score target market','Estimate lead pool','Flag compliance risks'],'gate',120,180],
 ['Lead Discovery','Acquire public business prospects from approved sources.','DISCOVERED','Hermes',['Collect public channels','Deduplicate records','Store source evidence'],'agent',390,120],
@@ -29,18 +63,305 @@ const data=[
 ['Client Success','Monitor availability, conversions, renewals and risk.','MAINTENANCE','Success Agent',['Monitor service','Create monthly report','Track requests'],'live',450,700],
 ['Expansion','Recommend upgrades only from observed client needs.','EXPANSION_READY','Expansion Agent',['Detect friction','Map evidence to offer','Request human review'],'live',780,730],
 ['Learning Loop','Attribute outcomes to markets, offers and messages.','LEARNING','TCC Orchestrator',['Measure revenue','Improve scoring','Preserve governance'],'runtime',1110,700]];
-const world=document.querySelector('#world'), svg=document.querySelector('#edges');
-data.forEach((n,i)=>{let e=document.createElement('article');e.className='node '+n[5];e.dataset.type=n[5];e.style.left=n[6]+'px';e.style.top=n[7]+'px';e.innerHTML=`<span class="idx">${String(i+1).padStart(2,'0')}</span><span class="badge">${n[5]==='gate'?'APPROVAL':String(n[5]).toUpperCase()}</span><h3>${n[0]}</h3><p>${n[2]}</p>`;e.onclick=()=>openNode(i);world.appendChild(e)});
-function edge(a,b,hot=true){let x1=data[a][6]+205,y1=data[a][7]+48,x2=data[b][6],y2=data[b][7]+48;if(Math.abs(y2-y1)>100){x1=data[a][6]+102;y1=data[a][7]+95;x2=data[b][6]+102;y2=data[b][7];}let p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',`M${x1},${y1} C ${(x1+x2)/2},${y1} ${(x1+x2)/2},${y2} ${x2},${y2}`);p.setAttribute('class','edge '+(hot?'hot':''));svg.appendChild(p)}
-for(let i=0;i<data.length-1;i++)edge(i,i+1);edge(17,0,false);
-function openNode(i){let n=data[i];drawer.classList.add('open');dphase.textContent='NODE '+String(i+1).padStart(2,'0')+' · '+String(n[5]).toUpperCase();dtitle.textContent=n[0];ddesc.textContent=n[1];dauth.textContent=n[3];dstate.textContent=n[2];dtasks.innerHTML=n[4].map(x=>`<li>${x}</li>`).join('')}
-close.onclick=()=>drawer.classList.remove('open');
-let scale=.72,tx=30,ty=70,drag=false,sx=0,sy=0;function render(){world.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`};render();
-viewport.onpointerdown=e=>{if(e.target.closest('.node'))return;drag=true;sx=e.clientX-tx;sy=e.clientY-ty;viewport.classList.add('grabbing');viewport.setPointerCapture(e.pointerId)};viewport.onpointermove=e=>{if(drag){tx=e.clientX-sx;ty=e.clientY-sy;render()}};viewport.onpointerup=()=>{drag=false;viewport.classList.remove('grabbing')};viewport.onwheel=e=>{e.preventDefault();let old=scale;scale=Math.min(1.35,Math.max(.38,scale*(e.deltaY<0?1.1:.9)));let r=viewport.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;tx=mx-(mx-tx)*scale/old;ty=my-(my-ty)*scale/old;render()};
-plus.onclick=()=>{scale=Math.min(1.35,scale+.12);render()};minus.onclick=()=>{scale=Math.max(.38,scale-.12);render()};reset.onclick=()=>{scale=.72;tx=30;ty=70;render()};
-document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));c.classList.add('active');let f=c.dataset.filter;document.querySelectorAll('.node').forEach(n=>n.classList.toggle('hidden',f!=='all'&&n.dataset.type!==f))});
-search.oninput=e=>{let q=e.target.value.toLowerCase();document.querySelectorAll('.node').forEach((n,i)=>n.classList.toggle('hidden',!data[i].join(' ').toLowerCase().includes(q)))};
-let timer;simulate.onclick=()=>{clearInterval(timer);let i=0;document.querySelectorAll('.node').forEach(n=>n.style.outline='');timer=setInterval(()=>{if(i)document.querySelectorAll('.node')[i-1].style.outline='';if(i>=data.length){clearInterval(timer);return}let n=document.querySelectorAll('.node')[i];n.style.outline='3px solid #35e6d0';openNode(i++);},500)};
-focus.onclick=()=>document.body.requestFullscreen?.();
-function pal(v){palette.classList.toggle('open',v);if(v)setTimeout(()=>cmd.focus(),20)}document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();pal(true)}if(e.key==='Escape'){pal(false);drawer.classList.remove('open')}});palette.onclick=e=>{if(e.target===palette)pal(false)};document.querySelectorAll('.palitem').forEach(x=>x.onclick=()=>{pal(false);if(x.dataset.cmd==='reset')reset.click();if(x.dataset.cmd==='simulate')simulate.click();if(x.dataset.cmd==='gates')document.querySelector('[data-filter="gate"]').click()});
+// key, label, first step, last step (zero-based). Drives the Lifecycle buttons in the sidebar.
+const phases = [['acquisition','Acquisition',0,7],['sales','Sales',8,9],['fulfillment','Fulfillment',10,14],['recurring','Recurring ops',15,17]];
+const phaseOf = i => phases.find(p => i >= p[2] && i <= p[3]);
+const pad2 = i => String(i + 1).padStart(2, '0');
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+let dragEndedAt = -1e9;
+
+const els = data.map((n, i) => {
+  const e = document.createElement('div');
+  e.className = 'node ' + n[5];
+  e.dataset.type = n[5];
+  e.dataset.text = [n[0], n[1], n[2], n[3], ...n[4], n[5], phaseOf(i)[1]].join(' ').toLowerCase();
+  e.tabIndex = 0;
+  e.setAttribute('role', 'button');
+  e.style.left = n[6] + 'px';
+  e.style.top = n[7] + 'px';
+  e.innerHTML = `<span class="idx">${pad2(i)}</span><span class="badge">${n[5] === 'gate' ? 'APPROVAL' : n[5].toUpperCase()}</span><h2>${esc(n[0])}</h2><p>${esc(n[2])}</p>`;
+  e.addEventListener('click', () => { if (performance.now() - dragEndedAt > 250) openNode(i); });
+  e.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); openNode(i); } });
+  world.appendChild(e);
+  return e;
+});
+
+// ---- edges: leave from the side that faces the next step, so every arrowhead is visible ----
+const box = i => ({ x: data[i][6], y: data[i][7], w: els[i].offsetWidth, h: els[i].offsetHeight });
+const edgeEls = [];
+function addPath(d, cls, from, to) { const p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); p.setAttribute('class', cls); p.dataset.from = from; p.dataset.to = to; svg.appendChild(p); return p; }
+function edge(a, b) {
+  const A = box(a), B = box(b), acx = A.x + A.w / 2, acy = A.y + A.h / 2, bcx = B.x + B.w / 2, bcy = B.y + B.h / 2;
+  let d;
+  if (Math.abs(bcy - acy) > 140) {
+    const down = bcy > acy, y1 = down ? A.y + A.h : A.y, y2 = down ? B.y : B.y + B.h, m = (y1 + y2) / 2;
+    d = `M${acx},${y1} C${acx},${m} ${bcx},${m} ${bcx},${y2}`;
+  } else {
+    const right = bcx > acx, x1 = right ? A.x + A.w : A.x, x2 = right ? B.x : B.x + B.w, m = (x1 + x2) / 2;
+    d = `M${x1},${acy} C${m},${acy} ${m},${bcy} ${x2},${bcy}`;
+  }
+  edgeEls.push({ a, b, el: addPath(d, 'edge hot', a, b) });
+}
+for (let i = 0; i < data.length - 1; i++) edge(i, i + 1);
+{ // Learning Loop feeds the next Market Intelligence cycle: routed around the map, not through it.
+  const A = box(data.length - 1), B = box(0), x1 = A.x + A.w / 2, y1 = A.y + A.h, lane = 880, left = 50, y2 = B.y + B.h / 2, r = 24;
+  const d = `M${x1},${y1} V${lane - r} Q${x1},${lane} ${x1 - r},${lane} H${left + r} Q${left},${lane} ${left},${lane - r} V${y2 + r} Q${left},${y2} ${left + r},${y2} H${B.x}`;
+  edgeEls.push({ a: data.length - 1, b: 0, el: addPath(d, 'edge loop', data.length - 1, 0) });
+  const t = document.createElementNS(NS, 'text');
+  t.setAttribute('x', 640); t.setAttribute('y', lane - 10); t.setAttribute('text-anchor', 'middle'); t.setAttribute('class', 'edge-label');
+  t.textContent = 'LEARNING FEEDS THE NEXT CYCLE';
+  svg.appendChild(t);
+}
+
+// ---- view: pan, zoom, fit ----
+let scale = .72, tx = 30, ty = 70, touched = false;
+const MIN = .2, MAX = 1.6;
+const ALL = { x: 30, y: 100, w: 1935, h: 800 }; // every node plus the loop-back lane
+// True when the open details panel leaves a usable strip of map beside it. On a phone it covers everything.
+const beside = () => viewport.clientWidth - drawer.offsetWidth >= 320;
+function render(animate) { world.classList.toggle('anim', !!animate); world.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; }
+function freeArea() { // the part of the canvas not covered by the title, the controls or the open drawer
+  const r = viewport.getBoundingClientRect(), top = hud.getBoundingClientRect().bottom - r.top + 14;
+  const right = 20 + (drawer.classList.contains('open') && beside() ? drawer.offsetWidth : 0);
+  return { x: 20, y: top, w: Math.max(80, r.width - 20 - right), h: Math.max(80, r.height - top - 74) };
+}
+function boundsOf(ids) {
+  let x1 = 1e9, y1 = 1e9, x2 = -1e9, y2 = -1e9;
+  ids.forEach(i => { const b = box(i); x1 = Math.min(x1, b.x); y1 = Math.min(y1, b.y); x2 = Math.max(x2, b.x + b.w); y2 = Math.max(y2, b.y + b.h); });
+  return { x: x1 - 20, y: y1 - 20, w: x2 - x1 + 40, h: y2 - y1 + 40 };
+}
+function frame(b, max = 1.1, top = false) {
+  const f = freeArea();
+  scale = clamp(Math.min(f.w / b.w, f.h / b.h), MIN, max);
+  tx = f.x + (f.w - b.w * scale) / 2 - b.x * scale;
+  ty = f.y + (top ? 0 : (f.h - b.h * scale) / 2) - b.y * scale;
+  render(true);
+}
+// Show the whole map where it stays legible. Where it would shrink below half size, start on the
+// first steps at a readable size instead, placed at the top so the rows below show, and leave
+// the rest to panning.
+function home() {
+  const f = freeArea();
+  if (Math.min(f.w / ALL.w, f.h / ALL.h) >= .5) frame(ALL);
+  else frame(boundsOf(f.w < 620 ? [0, 1] : [0, 1, 2]), .8, true);
+}
+function centerOn(i) {
+  const b = box(i), f = freeArea();
+  if (scale < .55) scale = .72;
+  tx = f.x + f.w / 2 - (b.x + b.w / 2) * scale;
+  ty = f.y + f.h / 2 - (b.y + b.h / 2) * scale;
+  render(true);
+}
+function reveal(i) { // slide the map over if the drawer would cover the step that was opened
+  if (!beside()) return;
+  const over = els[i].getBoundingClientRect().right - (innerWidth - drawer.offsetWidth - 20);
+  if (over > 0) { tx -= over; render(true); }
+}
+function zoomAt(cx, cy, next) {
+  const r = viewport.getBoundingClientRect(), mx = cx - r.left, my = cy - r.top, old = scale;
+  scale = clamp(next, MIN, MAX);
+  tx = mx - (mx - tx) * scale / old;
+  ty = my - (my - ty) * scale / old;
+  touched = true;
+  render(false);
+}
+function zoomStep(f) { const r = viewport.getBoundingClientRect(); zoomAt(r.left + r.width / 2, r.top + r.height / 2, scale * f); }
+
+const pts = new Map();
+let drag = null, pinch = null;
+const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+viewport.addEventListener('pointerdown', e => {
+  if (e.pointerType === 'mouse' && e.button !== 0) return;
+  pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (pts.size === 1) drag = { x: e.clientX, y: e.clientY, tx, ty, moved: false };
+  else if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch = { d: dist(a, b) || 1, scale }; drag = null; }
+});
+addEventListener('pointermove', e => {
+  if (!pts.has(e.pointerId)) return;
+  pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (pinch && pts.size === 2) {
+    const [a, b] = [...pts.values()];
+    dragEndedAt = performance.now();
+    zoomAt((a.x + b.x) / 2, (a.y + b.y) / 2, pinch.scale * dist(a, b) / pinch.d);
+    return;
+  }
+  if (!drag) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!drag.moved && Math.hypot(dx, dy) < 5) return; // a tap or click, not a drag
+  drag.moved = touched = true;
+  viewport.classList.add('grabbing');
+  tx = drag.tx + dx; ty = drag.ty + dy;
+  render(false);
+});
+function endPointer(e) {
+  if (!pts.has(e.pointerId)) return;
+  pts.delete(e.pointerId);
+  if (drag && drag.moved) dragEndedAt = performance.now(); // the click that follows a drag must not open a step
+  if (pts.size < 2) pinch = null;
+  if (pts.size === 1) { const p = [...pts.values()][0]; drag = { x: p.x, y: p.y, tx, ty, moved: true }; }
+  if (pts.size === 0) { drag = null; viewport.classList.remove('grabbing'); }
+}
+addEventListener('pointerup', endPointer);
+addEventListener('pointercancel', endPointer);
+viewport.addEventListener('wheel', e => { e.preventDefault(); zoomAt(e.clientX, e.clientY, scale * Math.exp(-e.deltaY * .0015)); }, { passive: false });
+$('zoomIn').addEventListener('click', () => zoomStep(1.18));
+$('zoomOut').addEventListener('click', () => zoomStep(1 / 1.18));
+$('home').addEventListener('click', () => { touched = false; home(); });
+let resizeTimer;
+addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { if (!touched) home(); }, 150); });
+
+// ---- details drawer ----
+let selected = -1;
+function openNode(i, opts = {}) {
+  const n = data[i], ph = phaseOf(i);
+  selected = i;
+  els.forEach((e, k) => e.classList.toggle('sel', k === i));
+  $('dphase').textContent = `NODE ${pad2(i)} · ${n[5] === 'gate' ? 'APPROVAL GATE' : n[5].toUpperCase()} · ${ph[1].toUpperCase()}`;
+  $('dtitle').textContent = n[0];
+  $('ddesc').textContent = n[1];
+  $('dauth').textContent = n[3];
+  $('dstate').textContent = n[2];
+  $('dtasks').innerHTML = n[4].map(x => `<li>${esc(x)}</li>`).join('');
+  $('dbar').style.width = (i + 1) / data.length * 100 + '%';
+  $('dstep').textContent = `Step ${i + 1} of ${data.length} · ${ph[1]}`;
+  drawer.inert = false;
+  drawer.classList.add('open');
+  document.body.classList.add('detail');
+  if (opts.reveal !== false) reveal(i);
+}
+function closeDrawer() {
+  const back = drawer.contains(document.activeElement) ? els[selected] : null;
+  drawer.classList.remove('open');
+  document.body.classList.remove('detail');
+  drawer.inert = true;
+  els.forEach(e => e.classList.remove('sel'));
+  selected = -1;
+  if (back) back.focus({ preventScroll: true });
+}
+$('drawerClose').addEventListener('click', closeDrawer);
+
+// ---- filters: type chip, lifecycle phase and search text combine ----
+const filter = { type: 'all', phase: null, q: '' };
+function applyFilters() {
+  els.forEach((e, i) => {
+    const hide = (filter.type !== 'all' && e.dataset.type !== filter.type) || (filter.phase && phaseOf(i)[0] !== filter.phase) || (filter.q && !e.dataset.text.includes(filter.q));
+    e.classList.toggle('hidden', !!hide);
+    e.tabIndex = hide ? -1 : 0;
+    e.setAttribute('aria-disabled', !!hide);
+  });
+  edgeEls.forEach(x => x.el.classList.toggle('dim', els[x.a].classList.contains('hidden') || els[x.b].classList.contains('hidden')));
+  document.querySelectorAll('.chip[data-filter]').forEach(c => { const on = c.dataset.filter === filter.type; c.classList.toggle('active', on); c.setAttribute('aria-pressed', on); });
+  document.querySelectorAll('.nav[data-phase]').forEach(b => b.classList.toggle('active', b.dataset.phase === filter.phase));
+  document.querySelector('[data-nav="map"]').classList.toggle('active', !filter.phase && filter.type !== 'gate');
+  document.querySelector('[data-nav="gates"]').classList.toggle('active', !filter.phase && filter.type === 'gate');
+  $('empty').hidden = els.some(e => !e.classList.contains('hidden'));
+}
+function setFilter(patch) { Object.assign(filter, patch); applyFilters(); }
+function clearFilters() { searchBox.value = ''; setFilter({ type: 'all', phase: null, q: '' }); }
+document.querySelectorAll('.chip[data-filter]').forEach(c => c.addEventListener('click', () => setFilter({ type: c.dataset.filter })));
+searchBox.addEventListener('input', () => setFilter({ q: searchBox.value.trim().toLowerCase() }));
+$('clearFilters').addEventListener('click', clearFilters);
+document.querySelector('[data-nav="map"]').addEventListener('click', () => { clearFilters(); touched = false; home(); });
+document.querySelector('[data-nav="gates"]').addEventListener('click', () => { setFilter({ type: 'gate', phase: null }); touched = false; home(); });
+document.querySelectorAll('.nav[data-phase]').forEach(b => b.addEventListener('click', () => {
+  const p = phases.find(x => x[0] === b.dataset.phase), on = filter.phase !== p[0];
+  setFilter({ phase: on ? p[0] : null });
+  if (on) frame(boundsOf(Array.from({ length: p[3] - p[2] + 1 }, (_, k) => p[2] + k)), 1); else home();
+}));
+
+// ---- simulation: walks the steps in order, keeping the current one in view ----
+const STEP_MS = 800;
+let sim = null;
+function stopSim() {
+  if (!sim) return;
+  clearInterval(sim);
+  sim = null;
+  els.forEach(e => e.classList.remove('active'));
+  simBtn.textContent = '▶ Simulate flow';
+}
+function toggleSim() {
+  if (sim) { stopSim(); return; }
+  clearFilters();
+  let i = 0;
+  const step = () => {
+    els.forEach(e => e.classList.remove('active'));
+    if (i >= data.length) { stopSim(); return; }
+    els[i].classList.add('active');
+    if (beside()) openNode(i, { reveal: false }); // on a phone the drawer would cover the whole map
+    centerOn(i);
+    i++;
+  };
+  simBtn.textContent = '■ Stop';
+  step();
+  sim = setInterval(step, STEP_MS);
+}
+simBtn.addEventListener('click', toggleSim);
+
+// ---- focus mode: hides the sidebar, and goes full screen where the browser allows it ----
+function toggleFocus() {
+  const on = !document.body.classList.contains('focusmode');
+  document.body.classList.toggle('focusmode', on);
+  focusBtn.setAttribute('aria-pressed', on);
+  focusBtn.textContent = on ? 'Exit focus' : 'Focus mode';
+  if (on) { try { const p = document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); if (p && p.catch) p.catch(() => {}); } catch (err) { /* class-only focus mode */ } }
+  else if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen();
+  requestAnimationFrame(() => { if (!touched) home(); });
+}
+focusBtn.addEventListener('click', toggleFocus);
+document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && document.body.classList.contains('focusmode')) toggleFocus(); });
+
+// ---- command palette ----
+const commands = [
+  { label: 'Reset view', run: () => { clearFilters(); touched = false; home(); } },
+  { label: 'Simulate approved workflow', run: toggleSim },
+  { label: 'Show approval gates only', run: () => setFilter({ type: 'gate', phase: null }) },
+  { label: 'Show everything', run: clearFilters },
+  { label: 'Toggle focus mode', run: toggleFocus },
+  ...data.map((n, i) => ({ label: `Go to ${pad2(i)} · ${n[0]}`, run: () => { clearFilters(); openNode(i, { reveal: false }); centerOn(i); } })),
+];
+let palShown = [], palSel = 0;
+function renderPal() {
+  const q = cmd.value.trim().toLowerCase();
+  palShown = commands.filter(c => c.label.toLowerCase().includes(q)).slice(0, 8);
+  palSel = clamp(palSel, 0, Math.max(0, palShown.length - 1));
+  palList.innerHTML = palShown.length
+    ? palShown.map((c, i) => `<div class="palitem${i === palSel ? ' on' : ''}" role="option" aria-selected="${i === palSel}" data-i="${i}">${esc(c.label)}</div>`).join('')
+    : '<div class="palempty">No matching command.</div>';
+}
+function pal(open) {
+  palette.classList.toggle('open', open);
+  if (open) { cmd.value = ''; palSel = 0; renderPal(); setTimeout(() => cmd.focus(), 20); }
+}
+function runPal(i) { const c = palShown[i]; if (!c) return; pal(false); c.run(); }
+cmd.addEventListener('input', () => { palSel = 0; renderPal(); });
+cmd.addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown') { e.preventDefault(); palSel = Math.min(palSel + 1, palShown.length - 1); renderPal(); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); palSel = Math.max(palSel - 1, 0); renderPal(); }
+  else if (e.key === 'Enter') { e.preventDefault(); runPal(palSel); }
+});
+palList.addEventListener('click', e => { const it = e.target.closest('.palitem'); if (it) runPal(+it.dataset.i); });
+palette.addEventListener('click', e => { if (e.target === palette) pal(false); });
+
+document.addEventListener('keydown', e => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); pal(!palette.classList.contains('open')); return; }
+  if (e.key === 'Escape') {
+    if (palette.classList.contains('open')) pal(false);
+    else if (drawer.classList.contains('open')) closeDrawer();
+    else if (document.body.classList.contains('focusmode') && !document.fullscreenElement) toggleFocus();
+    return;
+  }
+  if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === '+' || e.key === '=') zoomStep(1.18);
+  else if (e.key === '-') zoomStep(1 / 1.18);
+  else if (e.key === '0') { touched = false; home(); }
+});
+
+// ---- start ----
+$('gateCount').textContent = data.filter(n => n[5] === 'gate').length;
+if (!/Mac|iPhone|iPad/.test(navigator.platform)) $('kbdHint').textContent = 'Ctrl K';
+applyFilters();
+home();
+world.classList.remove('anim'); // no fly-in on first paint
+})();
 </script></body></html>

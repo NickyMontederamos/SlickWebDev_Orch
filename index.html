@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SlickLab TCC — Orchestration maps</title>
+<meta name="description" content="Two interactive reference maps for the SlickLab TCC: the agency lifecycle from lead to recurring operations, and the governed AI control plane behind it.">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="data:,">
+<style>
+:root{--bg:#07090e;--panel:#0e121b;--text:#eaf0ff;--muted:#8490a7;--cyan:#35e6d0;--blue:#5b8cff;--violet:#a56bff;--line:#253047}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 0,#14233b,transparent 40%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:920px;margin:0 auto;padding:56px 16px 40px}
+.eyebrow{color:var(--cyan);font:700 11px ui-monospace,monospace;letter-spacing:.16em}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:10px 0 12px}
+.lede{color:var(--muted);max-width:60ch;margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+a.card{display:block;padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#151c28,#0c111a);color:inherit;text-decoration:none;transition:transform .2s,border-color .2s}
+a.card:hover,a.card:focus-visible{transform:translateY(-3px);border-color:var(--cyan);outline:none}
+.card small{color:var(--cyan);font:700 10px ui-monospace,monospace;letter-spacing:.14em}
+.card h2{font-size:19px;margin:8px 0 6px}
+.card p{margin:0 0 14px;color:var(--muted)}
+.card span{color:var(--cyan);font-weight:700}
+.note{margin-top:28px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:13px}
+.note a{color:var(--cyan)}
+@media(prefers-reduced-motion:reduce){a.card{transition:none}}
+</style></head><body><main>
+<div class="eyebrow">SLICKLAB / TCC</div>
+<h1>Orchestration maps</h1>
+<p class="lede">Two views of the same operating model. One follows a client from first research to recurring work. The other shows the control plane that keeps agents inside approved limits.</p>
+<div class="grid">
+<a class="card" href="slicklab_tcc_orchestration_corrected.html"><small>AGENCY LIFECYCLE</small><h2>Agency orchestration map</h2><p>Eighteen steps from market selection to the learning loop, with the four points where a person must approve before work continues.</p><span>Open the map →</span></a>
+<a class="card" href="TCC_HyperInteractive_Integrated_Infrastructure.html"><small>CONTROL PLANE</small><h2>TCC HyperNexus</h2><p>Control, knowledge, value, integration and audit planes, a catalog of twenty connectors with their safety defaults, and the database schema.</p><span>Open the architecture →</span></a>
+</div>
+<p class="note">These pages are reference diagrams. They do not run agents, send messages or change any system. The database schema can be read, copied or downloaded from the <a href="TCC_HyperInteractive_Integrated_Infrastructure.html#sql">SQL view</a>.</p>
+</main></body></html>
